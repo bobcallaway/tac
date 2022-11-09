@@ -36,7 +36,7 @@ The following table describes the main types of groups and their characteristics
 
 ### TODO
 
-* define and document the governance relationships for Alpha/Omega, GNU Toolchain Initiative, and SigStore (collectively, "SIFs")
+* define and document the governance relationships for affiliated initiatives: Alpha/Omega, GNU Toolchain Infrastructure 
 * define **Contributors** in a consistent way, so that electorate membership can be consistently, and ideally procedurally, determined
 * define criteria for approving or disapproving the Charters of TAC-subordinate bodies
 
@@ -50,7 +50,7 @@ Legend:
 
 ```mermaid
 flowchart TB
-    A([GoverningBoard])
+    A([Governing Board])
 
     subgraph subC[Committees]
         direction TB
@@ -77,5 +77,8 @@ flowchart TB
     end
     B ====> subWG
 
-    B ----> P1[Example Project]
+    subgraph projects[Projects]
+       SS[sigstore]
+    end
+    B ====> projects
 ```
